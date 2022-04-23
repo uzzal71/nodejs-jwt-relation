@@ -1,0 +1,39 @@
+{
+  "name": "auth_api",
+  "version": "1.0.0",
+  "description": "Node, Express, MongoDB, Nodemon, dotenv, jsonwebtoken, bcrypt, body-parser, mongoose, babel",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon ./index.js --exec babel-node -e js"
+  },
+  "keywords": [
+    "Nodejs",
+    "Expressjs",
+    "MongoDB",
+    "Mongoose",
+    "Dotenv",
+    "jsonwebtoken",
+    "bcrypt",
+    "body-parser"
+  ],
+  "author": "Uzzal Roy",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "jsonwebtoken": "^8.5.1",
+    "mongodb": "^4.5.0",
+    "mongoose": "^6.3.1",
+    "nodemon": "^2.0.15",
+    "package.json": "^2.0.1",
+    "swagger-jsdoc": "^6.2.1",
+    "swagger-ui-express": "^4.3.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-0": "^6.24.1"
+  }
+}
