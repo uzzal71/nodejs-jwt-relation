@@ -1,13 +1,27 @@
+import { 
+    getUsers,
+    getUserWithId,
+    updateUser,
+    deleteUser
+ } from "../controllers/userController";
+
+ import { verify } from "../middlewares/verify";
+
 const userRoute = (app) => {
+
     app.route('/user')
-        .get((req, res) => {
-            res.send('USER GET REQUEST');
-        })
+        // Get All User
+        .get(verify, getUsers)
 
     app.route('/user/:userId')
-        .get((req, res) => { res.send('USER GET SINGLE REQUEST'); })
-        .put((req, res) => { res.send('USER UPDATE REQUEST'); })
-        .delete((req, res) => { res.send('USER DELETE REQUEST'); })
+        // Get Specific User
+        .get(verify, getUserWithId)
+
+        // Update Specific User
+        .put(verify, updateUser)
+
+        // Delete Specific User
+        .delete(verify, deleteUser);
 }
 
 export default userRoute;
